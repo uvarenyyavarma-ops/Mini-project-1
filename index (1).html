@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Attendance Tracker</title>
+</head>
+<body>
+
+<h2>Attendance Tracker</h2>
+
+<input type="text" id="name" placeholder="Student Name">
+<button onclick="mark()">Present</button>
+
+<ul id="list"></ul>
+
+<script>
+function mark() {
+    let name = document.getElementById("name").value;
+    if (name == "") return alert("Enter a name");
+
+    let item = document.createElement("li");
+    item.innerHTML = name + " - Present";
+    document.getElementById("list").appendChild(item);
+
+    document.getElementById("name").value = "";
+}
+</script>
+
+</body>
+</html>
